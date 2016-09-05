@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title id = "title"> web gui</title>
+		<script type= "text/javascript">
+			function loadXMLDoc() {
+				var xmlhttp;
+				xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function() {
+					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						document.getElementById("mon0").innerHTML = xmlhttp.responseText;
+						}
+					}
+					xmlhttp.open("GET", "monitor_text.html", true);
+					xmlhttp.send();
+				}
+
+			function startTimer() {
+				setInterval(loadXMLDoc, 300);
+				}
+			
+			function ch_value() {
+				if (document.getElementById("WS").value  == "Wake_up nodes"){
+					document.getElementById("WS").value = "Shutdown nodes"
+					}
+				if(document.getElementById("WS").value == "Shutdown nodes"){
+					document.getElementById("WS").value = "Wake_up nodes"
+					}
+				}
+
+		</script>
+	</head>
+	
+	<body onload = "startTimer()">
+		<div id = "mon0"> <h2>Monitor 0</h2></div>
+                <div id = "mon1"> <h2>Monitor 1</h2></div>
+                <div id = "mon2"> <h2>Monitor 2</h2></div>
+		<button type="button" onclick="loadXMLDoc()">monitors manaual refresh</button>
+		<form method = "POST" action= "/send">
+			<label>Operator:#</label>
+			<input type = "radio" name = "nodes" value = "node1"/>nodes<br />
+			<input type = "radio" name = "nodes" value = "node0" />local_node<br />
+			<input type = "radio" name = "nodes" value = "local" />local_shell<br />
+			<input type = "email" name = "email" />
+			<input type = "text" name = "input_text" value = "" autofocus/>
+			<input type = "submit" value="Send"/> 
+		</form>
+		<form method = "POST" action = "/WS">
+			<input name = "WS" id = "WS" type = "submit" onclick = "ch_val()" value ="Wake_up/Shutdown nodes"\>
+		</form>
+	</body>
+</html>			

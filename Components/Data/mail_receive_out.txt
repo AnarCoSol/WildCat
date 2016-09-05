@@ -1,0 +1,29 @@
+Mail | Traceback (most recent call last):
+  File "mail_client.py", line 162, in <module>
+    m.receive_loop()
+  File "mail_client.py", line 129, in receive_loop
+    received = self.msn.receiver()
+  File "/root/Operator/development/Wild_Cat/Components/Modules/Messenger.py", line 250, in receiver
+    code_appender = self.receive(self.username, self.password)
+  File "/root/Operator/development/Wild_Cat/Components/Modules/Messenger.py", line 207, in receive
+    pop_server.pass_(password)
+  File "/usr/lib/python2.7/poplib.py", line 197, in pass_
+    return self._shortcmd('PASS %s' % pswd)
+  File "/usr/lib/python2.7/poplib.py", line 160, in _shortcmd
+    return self._getresp()
+  File "/usr/lib/python2.7/poplib.py", line 136, in _getresp
+    raise error_proto(resp)
+poplib.error_proto: -ERR [AUTH] Username and password not accepted.
+Mail | 
+_________________________________________________________________________
+
+program: mail_client.py
+directory: /root/Developing/Wild_Cat/Components
+credits: part of The Wild/Cat reimplementation of Operator project
+coded by: AnarCo_Sol
+license: Free as Anarchist Freedom
+
+_________________________________________________________________________
+
+
+receiving started

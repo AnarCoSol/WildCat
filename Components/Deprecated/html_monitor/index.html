@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title id = "title"> web gui</title>
+		<script type= "text/javascript">
+
+			function locally_check(url){
+				if (document.location.host) {
+				  	// remote file over http or https
+					} else {
+					url = url
+				  	// local file
+					}
+				}
+
+			function loadXMLDoc(url) {
+				var xmlhttp;
+				var url = window.location.href
+				xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function() {
+					if (xmlhttp.readyState == 4 && xmlhttp.status == 0) {
+						document.getElementById("mon0").innerHTML = xmlhttp.responseText;
+						}
+					}
+					xmlhttp.open("GET", "monitor_text.html", false);
+					xmlhttp.send(null);
+				}
+
+			function startTimer() {
+				setInterval(loadXMLDoc, 300);
+				}
+			
+			function ch_value() {
+				if (document.getElementById("WS").value  == "Wake_up nodes"){
+					document.getElementById("WS").value = "Shutdown nodes"
+					}
+				if(document.getElementById("WS").value == "Shutdown nodes"){
+					document.getElementById("WS").value = "Wake_up nodes"
+					}
+				}
+
+			function resizeIframe(obj) {
+    				obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+				}
+
+		</script>
+	</head>
+	
+	<body >
+		<iframe src="mon.html" frameborder="1" scrolling="no" onload="resizeIframe(this)" width=100%></iframe>
+		<form method = "POST" action= "index.html">
+			<input type = "submit" value=">"/> 
+		</form>
+	</body>
+</html>			

@@ -1,0 +1,6 @@
+distributed cloud system
+distributed neural network operator
+distributed operator
+automatic self "communication protocol finder" (neural network that can find a way to communicate)
+automatic self teaching to use github/pip hosted tools/libraries (maybe need a container)
+automatic self teaching to use any cli program  (may be gui reading html files or directly a monitor with a camera)

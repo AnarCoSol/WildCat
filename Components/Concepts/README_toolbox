@@ -1,0 +1,8 @@
+this is the toolbox folder, where every Operator tools will be stored, (Modules contain the core of Operator) 
+changelogs:
+
+todo:
+program to enumerate tools available in toolbox, guides, helping response
+mysql database for node/host id, e-mail datas, logs, ..
+
+the program must can make a ready to use Operator package (zipped, only core (Modules), or toolbox) see zip_file in /Ideas

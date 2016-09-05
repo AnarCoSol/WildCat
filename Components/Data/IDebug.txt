@@ -1,0 +1,22 @@
+i 0 Cat.py|'python tg_client.py receiver -c /root/tg'
+i 0 Cat.py|Data/IDebug.txt
+i 0 Cat.py|Data/IOStack.txt
+i 0 Cat.py|'io file'
+i 0 Cat.py|Data/tg_mask_out.txt
+i 0 Cat.py|Data/tg_mask_out.txt
+i 0 Cat.py|False
+i 0 Cat.py|bash
+i 0 Cat.py|Data/IOStack.txt
+i 0 Cat.py|Data/IOStack.txt
+i 0 Cat.py|'io file'
+i 0 Cat.py|Data/bash_mask_in.txt
+i 0 Cat.py|Data/bash_mask_out.txt
+i 0 Cat.py|False
+i 0 Cat.py|'python Operator_processor.py start -i Data/IOStack.txt -o Data/IOStack.txt'
+i 0 Cat.py|Data/IOStack.txt
+i 0 Cat.py|Data/opDebug.txt
+i 0 Cat.py|'io file'
+i 0 Cat.py|Data/op_mask_in.txt
+i 0 Cat.py|Data/op_mask_out.txt
+i 0 Cat.py|False
+meta-data|data

@@ -1,0 +1,1 @@
+| usage: python Formatter.py-mi [mask_in] -mo [mask_out]

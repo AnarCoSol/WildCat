@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                <title id = "title"> web gui</title>
+                <script type= "text/javascript">
+			window.setInterval("reloadIFrame();", 1000);
+			function reloadIFrame() {
+				document.getElementById("out").src="out.html";
+				}
+			function resizeIframe(obj) {
+				obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+				}
+
+		</script>
+
+	<body>
+		<iframe id="out" src="out.html" frameborder="0" scrolling="yes" onload="resizeIframe(this)"></iframe>
+
+                <form method = "POST" action= "/send">
+                        <input type = "text" name = "input_text" value = "" autofocus/>
+                        <input type = "submit" value="Send"/>
+                </form>
+
+	</body>
